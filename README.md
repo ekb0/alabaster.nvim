@@ -3,6 +3,11 @@ Alabaster Color Scheme
 
 A color scheme with minimal amount of highlighting for neovim.
 
+## About This Fork
+This fork adds support for Alabaster BG because that is the Alabaster theme variation I prefer most.
+
+![alabaster-bg](https://github.com/ekb0/alabaster.nvim/assets/30992256/6f517dcf-66b4-46b0-8822-8a47aa1d8400)
+
 ## Motivation
 (from the original [sublime text theme](https://github.com/tonsky/sublime-scheme-alabaster))
 
