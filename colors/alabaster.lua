@@ -529,7 +529,7 @@ elseif vim.g.alabaster_bg then
         Structure = { bg = def_bg },
         Typedef = { bg = def_bg },
 
-        Special = { fg = ansi.yellow },
+        Special = { bg = ansi.yellow },
         -- TODO better color than diffchange, try reddish
         -- SpecialChar = { fg = diffchange }, --  special character in a constant
         -- Tag            { }, --    you can use CTRL-] on this
@@ -662,7 +662,7 @@ elseif vim.g.alabaster_bg then
         TelescopeMultiSelection = { fg = ansi.magenta },
         TelescopePromptPrefix = { fg = ansi.blue },
         TelescopeSelectionCaret = { fg = mistake.fg },
-        TelescopeTitle = { fg = ansi.yellow },
+        TelescopeTitle = { fg = ansi.black },
         TelescopeResultsTitle = { fg = ansi.yellow },
         --- fzf-lua
         FzfLuaBorder = { fg = "#abbdc0" },
