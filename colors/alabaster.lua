@@ -449,7 +449,7 @@ elseif vim.g.alabaster_bg then
         -- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
         CursorColumn = { bg = "#E2EEEE" },
         CursorLine = { bg = "#E2EEEE" },
-        Directory = { fg = ansi.blue },
+        Directory = { fg = "#007acc" },
         DiffAdd = { bg = "#ADFFB7", fg = "#0A7816" },
         DiffDelete = { bg = "#F8B28F", fg = "#872C28" },
         DiffText = { fg = "#fff987", bg = "#876004" },
