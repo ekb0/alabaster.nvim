@@ -408,7 +408,7 @@ elseif vim.g.alabaster_bg then
         green = "#f1fadf",
         magenta = "#7a3e9d",
         red = "#aa3731",
-        white = "#f7f7f7",
+        white = "#000000",
         yellow = "#fffabc",
     }
     local bg = "#ffffff"
@@ -619,6 +619,7 @@ elseif vim.g.alabaster_bg then
         ["@function"] = { fg = ansi.black },
         ["@function.builtin"] = { fg = ansi.black },
         ["@function.macro"] = { fg = ansi.black },
+        ["@function.call"] = { fg = ansi.black },
         ["@keyword"] = { fg = ansi.black },
         ["@keyword.function"] = { fg = ansi.black },
         ["@label"] = { fg = ansi.black },
@@ -645,6 +646,11 @@ elseif vim.g.alabaster_bg then
         ["@text"] = { fg = ansi.black },
         ["@text.note"] = { bg = "#dddddd", fg = ansi.blue },
         ["@text.warning"] = { bg = "#FFDEAA", fg = ansi.blue },
+        ["@lsp.type.class"] = { fg = ansi.black },
+        ["@lsp.type.namespace"] = { fg = ansi.black },
+        ["@lsp.type.function"] = { fg = ansi.black },
+        ["@lsp.type.method"] = { fg = ansi.black },
+        ["@lsp.type.typeParameter"] = { fg = ansi.black },
 
         --- Theme specific
         ["@AlabasterConstant"] = { fg = const_fg },
