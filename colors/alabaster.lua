@@ -431,7 +431,7 @@ elseif vim.g.alabaster_bg then
     }
     local error = "#d13e23"
     local warn = "#BC7500"
-    local hint = ansi.blue
+    local hint = "#007acc"
     local info = "#278C00"
     local pmenu_bg = "#e7e7e7"
     local float_bg = vim.g.alabaster_floatborder and bg or pmenu_bg
@@ -465,12 +465,12 @@ elseif vim.g.alabaster_bg then
         IncSearch = { bg = active, fg = fg },
         -- Substitute   { }, -- |:substitute| replacement text highlighting
         LineNr = { fg = "#7d7c7c" },
-        CursorLineNr = { fg = ansi.blue, bold = 1 },
+        CursorLineNr = { fg = ansi.cyan, bold = 1 },
         MatchParen = { underline = 1, sp = active },
         -- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
         -- MsgArea      { }, -- Area for messages and cmdline
         -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
-        MoreMsg = { fg = ansi.green, bold = 1 },
+        MoreMsg = { fg = info, bold = 1 },
         NonText = { fg = "#696969" },
         Normal = { bg = bg, fg = fg },
         NormalFloat = { bg = float_bg },
@@ -480,7 +480,7 @@ elseif vim.g.alabaster_bg then
         PmenuSel = { bg = "#c7c7c7" },
         PmenuSbar = { bg = "#777777" },
         PmenuThumb = { bg = "#333333" },
-        Question = { fg = ansi.green },
+        Question = { fg = info, bold = true },
         QuickFixLine = { bg = "#E2EEEE" },
         Search = { bg = "#fae9b7", fg = fg },
         SpecialKey = { fg = ansi.cyan },
@@ -492,7 +492,7 @@ elseif vim.g.alabaster_bg then
         StatusLineNC = { bg = statusline, fg = "#9f9f9f" },
         TabLine = { bg = statusline, fg = "#7d7d7d" },
         TabLineFill = { bg = statusline },
-        TabLineSel = { bg = statusline, fg = ansi.blue },
+        TabLineSel = { bg = statusline, fg = ansi.cyan },
         Title = { fg = const_fg },
         Visual = { bg = "#bfdbfe" },
         VisualNOS = { bg = "#bfdbfe" },
@@ -534,14 +534,14 @@ elseif vim.g.alabaster_bg then
         -- SpecialChar = { fg = diffchange }, --  special character in a constant
         -- Tag            { }, --    you can use CTRL-] on this
         -- Delimiter      { },
-        SpecialComment = { bg = "#FFDEAA", fg = ansi.blue },
+        SpecialComment = { bg = "#FFDEAA", fg = ansi.cyan },
         debugPc = { bg = "#C7C7EE" },
         debugBreakpoint = { bg = "#F8B28F" },
         helpHyperTextJump = { fg = ansi.magenta },
         helpSectionDelim = { fg = ansi.magenta },
         helpExample = { fg = ansi.cyan },
         helpCommand = { fg = ansi.cyan },
-        helpHeadline = { fg = ansi.blue },
+        helpHeadline = { fg = ansi.cyan },
         helpHeader = { fg = ansi.magenta },
 
         Underlined = { underline = 1 }, -- (preferred) text that stands out, HTML links
@@ -552,7 +552,7 @@ elseif vim.g.alabaster_bg then
 
         Error = { bg = mistake.bg, fg = mistake.fg },
 
-        Todo = { bg = "#FFDEAA", fg = ansi.blue },
+        Todo = { bg = "#FFDEAA", fg = ansi.cyan },
 
         --- Diagnostic
         LspReferenceText = { bg = "#dadada" },
@@ -562,6 +562,7 @@ elseif vim.g.alabaster_bg then
         LspCodeLensSeparator = { fg = "#999999" },
 
         --- Diagnostic
+        DiagnosticOk = { fg = info },
         DiagnosticError = { fg = error },
         DiagnosticWarn = { fg = warn },
         DiagnosticHint = { fg = hint },
@@ -644,8 +645,8 @@ elseif vim.g.alabaster_bg then
         ["@tag"] = { fg = ansi.black },
         ["@tag.delimiter"] = { fg = punct_fg },
         ["@text"] = { fg = ansi.black },
-        ["@text.note"] = { bg = "#dddddd", fg = ansi.blue },
-        ["@text.warning"] = { bg = "#FFDEAA", fg = ansi.blue },
+        ["@text.note"] = { bg = "#dddddd", fg = ansi.cyan },
+        ["@text.warning"] = { bg = "#FFDEAA", fg = ansi.cyan },
         ["@lsp.type.class"] = { fg = ansi.black },
         ["@lsp.type.namespace"] = { fg = ansi.black },
         ["@lsp.type.function"] = { fg = ansi.black },
@@ -666,17 +667,17 @@ elseif vim.g.alabaster_bg then
         TelescopeBorder = { fg = "#abbdc0" },
         TelescopeMatching = { fg = "#CC6F14" },
         TelescopeMultiSelection = { fg = ansi.magenta },
-        TelescopePromptPrefix = { fg = ansi.blue },
+        TelescopePromptPrefix = { fg = ansi.cyan },
         TelescopeSelectionCaret = { fg = mistake.fg },
         TelescopeTitle = { fg = ansi.black },
-        TelescopeResultsTitle = { fg = ansi.yellow },
+        TelescopeResultsTitle = { fg = ansi.brightyellow },
         --- fzf-lua
         FzfLuaBorder = { fg = "#abbdc0" },
         --- Neogit
         NeogitPopupActionDisabled = { fg = darker_fg },
         NeogitPopupActionKey = { fg = ansi.magenta },
         NeogitPopupOptionDisabled = { fg = darker_fg },
-        NeogitPopupOptionKey = { fg = ansi.blue },
+        NeogitPopupOptionKey = { fg = ansi.cyan },
         NeogitPopupSwitchDisabled = { fg = darker_fg },
         NeogitPopupSwitchEnabled = { fg = ansi.cyan },
         NeogitPopupSwitchKey = { fg = ansi.magenta },
@@ -695,7 +696,7 @@ elseif vim.g.alabaster_bg then
         StatuslineHint = { fg = hint, bg = statusline },
         StatuslineInfo = { fg = info, bg = statusline },
         StatuslineWarn = { fg = warn, bg = statusline },
-        StatuslineBlue = { fg = ansi.blue, bg = statusline },
+        StatuslineBlue = { fg = ansi.cyan, bg = statusline },
         StatuslineRed = { fg = ansi.red, bg = statusline },
         StatuslineGreen = { fg = ansi.green, bg = statusline },
         StatuslineCyan = { fg = ansi.cyan, bg = statusline },
@@ -703,21 +704,21 @@ elseif vim.g.alabaster_bg then
         --- ALE
         ALEWarningSign = { fg = warn },
         --- vim-matchup
-        MatchupVirtualText = { fg = ansi.yellow },
+        MatchupVirtualText = { fg = ansi.brightyellow },
         --- For `highlight link`
         AlabasterBlack = { fg = ansi.black },
-        AlabasterBlue = { fg = ansi.blue },
+        AlabasterBlue = { fg = ansi.cyan },
         AlabasterBrightYellow = { fg = ansi.brightyellow },
         AlabasterCyan = { fg = ansi.cyan },
-        AlabasterGreen = { fg = ansi.green },
+        AlabasterGreen = { fg = info },
         AlabasterBrightGreen = { fg = "#60cb00" },
         AlabasterMagenta = { fg = ansi.magenta },
         AlabasterRed = { fg = ansi.red },
         AlabasterWhite = { fg = ansi.black },
-        AlabasterYellow = { fg = ansi.yellow },
+        AlabasterYellow = { fg = ansi.brightyellow },
         --- Hop
-        HopNextKey = { fg = ansi.yellow },
-        HopNextKey1 = { fg = ansi.blue },
+        HopNextKey = { fg = ansi.brightyellow },
+        HopNextKey1 = { fg = ansi.cyan },
         HopNextKey2 = { fg = "#17A2D6" },
         HopUnmatched = { fg = "#bfbfbf" },
         --- Lightspeed
@@ -727,15 +728,15 @@ elseif vim.g.alabaster_bg then
         --- cmp
         CmpItemMenuDefault = { fg = ansi.magenta },
         --- nvim-ts-rainbow
-        rainbowcol1 = { fg = ansi.yellow },
+        rainbowcol1 = { fg = ansi.brightyellow },
         rainbowcol2 = { fg = ansi.magenta },
-        rainbowcol3 = { fg = ansi.blue },
+        rainbowcol3 = { fg = ansi.cyan },
         rainbowcol4 = { fg = ansi.green },
         rainbowcol5 = { fg = ansi.brightyellow },
         rainbowcol6 = { fg = ansi.red },
         rainbowcol7 = { fg = ansi.cyan },
         --- Iswap
-        ISwapSnipe = { bg = ansi.yellow, fg = bg },
+        ISwapSnipe = { bg = ansi.yellow },
         ISwapGrey = { fg = "#bfbfbf" },
         --- vim-dadbod-ui
         dbui_help = { fg = dim_comment },
